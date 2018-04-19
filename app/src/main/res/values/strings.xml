@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GithubSearchKotlin</string>
+    <string name="place_holder">Enter your repository name...</string>
+</resources>
