@@ -28,9 +28,6 @@ class CardAdapter(items: List<String>, ctx: Context): RecyclerView.Adapter<CardA
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = list.get(position)
         holder.itemView.setOnClickListener(View.OnClickListener {
-            println("repositories click on items " + position)
-            // start the intent from here lolzz
-//            println("this item has to be passed " + mItems.get(position).asJsonObject.get("full_name").toString().replace("\"", ""))
             val intent = Intent(this.context, ResultDetail::class.java)
             intent.putExtra("repo_name", list.get(position))
             this.context.startActivity(intent)

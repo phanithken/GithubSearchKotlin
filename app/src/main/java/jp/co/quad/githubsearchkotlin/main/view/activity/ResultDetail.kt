@@ -18,12 +18,12 @@ class ResultDetail : AppCompatActivity() {
         val repositoryName:String = intent.getStringExtra("repo_name")
 
         webView = findViewById<WebView>(R.id.web_view)
-        webView!!.webViewClient = object : WebViewClient() {
+        webView.webViewClient = object : WebViewClient() {
             override fun onReceivedError(view: WebView?, request: WebResourceRequest?, error: WebResourceError?) {
                 Toast.makeText(this@ResultDetail, error.toString(), Toast.LENGTH_SHORT).show()
             }
         }
         webView.settings.javaScriptEnabled = true
-        webView!!.loadUrl("https://github.com/" + repositoryName)
+        webView.loadUrl("https://github.com/" + repositoryName)
     }
 }
